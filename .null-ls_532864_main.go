@@ -6,17 +6,11 @@ import (
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
-  // check if the current request URL path exactly matches "/". If it doesn't,
-  // use the http.NotFound() function to send a 404 response to the client. 
-  // importantly, we then return from the handler. if we don't return the 
-  // handler would keep executing and also write the "Hello from AlgoAcademy"
-  // message.
   if r.URL.Path != "/"{
     http.NotFound(w, r)
     return
   }
-
- w.Write([]byte("Hello from AlgoAcademy"))
+  w.Write([]byte("Hello from AlgoAcademy"))
 }
 
 func snippetView(w http.ResponseWriter, r *http.Request) {
