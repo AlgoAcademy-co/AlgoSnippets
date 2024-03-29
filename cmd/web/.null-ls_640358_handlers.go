@@ -16,7 +16,7 @@ func home(w http.ResponseWriter, r *http.Request){
   // Initialize a slice containing the paths to the two files.
   // It's important to note that the file containing our base
   // tempalte must be the *first* file in the slice
-  files := []string{
+  file := []string{
     "./ui/html/base.tmpl",
     "./ui/html/pages/home.tmpl",
   }
